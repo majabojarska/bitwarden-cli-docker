@@ -1,6 +1,7 @@
 FROM debian:sid-slim
 
 ARG BW_CLI_VERSION
+ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt update && \
     apt install -y wget unzip && \
@@ -10,7 +11,8 @@ RUN apt update && \
     unzip bw.zip && \
     chmod +x bw && \
     mv bw /usr/local/bin/bw && \
-    rm -rfv bw.zip.*
+    apt remove -y wget unzip && \
+    apt autoremove -y
 
 COPY entrypoint.sh /
 
