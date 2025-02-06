@@ -1,4 +1,4 @@
-FROM debian:sid
+FROM debian:sid-slim
 
 ARG BW_CLI_VERSION
 
