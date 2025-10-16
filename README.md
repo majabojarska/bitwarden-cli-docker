@@ -15,3 +15,9 @@ An opinionated [Bitwarden CLI](https://bitwarden.com/help/cli/) Docker image.
   - Generates diff version update and opens a PR to review and merge.
 - [ ] Impl. release drafter.
 - [ ] Automated testing pipeline?
+
+## License and credits
+
+This is a spin-off of the MIT-licensed (charlesthomas/bitwarden-cli)[https://github.com/charlesthomas/bitwarden-cli] project.
+
+See the [LICENSE](./LICENSE) for more details.
