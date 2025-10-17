@@ -1,5 +1,8 @@
 # bitwarden-cli-docker
 
+[![Build](https://github.com/majabojarska/bitwarden-cli-docker/actions/workflows/status.yaml/badge.svg)](https://github.com/majabojarska/bitwarden-cli-docker/actions/workflows/status.yaml)
+[![Scheduled update](https://github.com/majabojarska/bitwarden-cli-docker/actions/workflows/update_cli.yaml/badge.svg)](https://github.com/majabojarska/bitwarden-cli-docker/actions/workflows/update_cli.yaml)
+
 An opinionated [Bitwarden CLI](https://bitwarden.com/help/cli/) Docker image.
 
 - API token authentication.
