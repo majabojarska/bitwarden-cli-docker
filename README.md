@@ -61,7 +61,7 @@ services:
       # Image-specific envs
       BW_HOST: "vault.bitwarden.eu" # or *.com
       BW_CLIENTID: "your_clientid"
-      BW_CLIENTSECRET: "supersecret"
+      BW_CLIENTSECRET: "your_clientsecret"
     volumes:
       - appdata:/home/bitwarden/appdata # Stores the session file across restarts
 
