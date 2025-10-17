@@ -21,12 +21,12 @@ jobs:
           # No need to sort here.
           echo BW_CLI_VERSION_LATEST=$(curl --silent \
             https://api.github.com/repos/bitwarden/clients/releases\?per_page\=100 \
-            | jq '
+            | jq --raw-output '
               first(
                 .[] | .assets | .[] |
                 select((.name | startswith("bw-oss-linux")) and (.name | endswith("zip"))) |
                 .name
-              ) | capture("(?<ver>[0-9]{4}[.][0-1][0-9][.][0-9]{1,3})").ver' \
+              ) | capture("(?<ver>[0-9]{4}[.][0-9]{1,2}[.][0-9]{1,3})").ver' \
             ) >> $GITHUB_ENV
 
       - name: Replace BW_CLI_VERSION with latest tag
@@ -44,7 +44,7 @@ jobs:
           token: ${{ secrets.PR_CREATE_PAT }}
           branch: auto-update-cli
           commit-message: Update Bitwarden CLI
-          title: Update Bitwarden CLI
+          title: Update Bitwarden CLI to ${{ env.BW_CLI_VERSION_LATEST }}
           body: |
             ## Beep boop 🤖. Fresh CLI incoming ♻️!
 
