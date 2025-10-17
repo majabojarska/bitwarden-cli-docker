@@ -42,6 +42,8 @@ Configuration is provided via environment variables. We can identify two variabl
   - `BW_CLIENTID` - generated with your API key, [see Bitwarden docs](https://bitwarden.com/help/personal-api-key/).
   - `BW_CLIENTSECRET` - same as above.
 
+### Docker compose
+
 Putting it all together, here's a minimal docker compose file:
 
 ```docker-compose
