@@ -26,4 +26,3 @@ WORKDIR /home/bitwarden
 COPY entrypoint.sh .
 
 ENTRYPOINT ["./entrypoint.sh"]
-
