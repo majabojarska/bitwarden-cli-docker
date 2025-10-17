@@ -44,7 +44,7 @@ jobs:
           token: ${{ secrets.PR_CREATE_PAT }}
           branch: auto-update-cli
           commit-message: Update Bitwarden CLI
-          title: Update Bitwarden CLI
+          title: Update Bitwarden CLI to ${{ env.BW_CLI_VERSION_LATEST }}
           body: |
             ## Beep boop 🤖. Fresh CLI incoming ♻️!
 
