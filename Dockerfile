@@ -1,6 +1,6 @@
 FROM debian:trixie-slim AS download
 
-ARG BW_CLI_VERSION="2025.10.0"
+ARG BW_CLI_VERSION=2025.09.0
 ARG BW_PORT=8087 # Port number for exposing the REST API
 
 RUN apt-get update \
