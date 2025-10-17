@@ -17,7 +17,10 @@ An opinionated [Bitwarden CLI](https://bitwarden.com/help/cli/) Docker image.
 
 ### Image
 
-The image is available both via Docker Hub and GHCR:
+The image is available both via
+[Docker Hub](https://hub.docker.com/r/majabojarska/bitwarden-cli/tags)
+and
+[GHCR](https://github.com/majabojarska/bitwarden-cli-docker/pkgs/container/bitwarden-cli):
 
 ```sh
 docker.io/majabojarska/bitwarden-cli
@@ -46,7 +49,7 @@ Configuration is provided via environment variables. We can identify two variabl
 
 Putting it all together, here's a minimal docker compose file:
 
-```docker-compose
+```yaml
 services:
   backend:
     image: majabojarska/bitwarden-cli
@@ -58,7 +61,7 @@ services:
       # Image-specific envs
       BW_HOST: "vault.bitwarden.eu" # or *.com
       BW_CLIENTID: "your_clientid"
-      BW_CLIENTSECRET: "supersecret"
+      BW_CLIENTSECRET: "your_clientsecret"
     volumes:
       - appdata:/home/bitwarden/appdata # Stores the session file across restarts
 
@@ -106,9 +109,11 @@ The two segments are concatenated with a dot ('.') character, for example:
 1. [x] Impl. release pipeline.
 1. [x] Cool badges 😎.
 1. [x] Getting started docs.
-1. [ ] Automated testing pipeline?
-1. [ ] Example docker-compose file.
+1. [ ] Document contributing
+1. [ ] Document releasing
+1. [x] Example docker-compose file.
 1. [ ] Link to helm chart repo once that's ready.
+1. [ ] Automated testing pipeline?
 
 ## License and credits
 
