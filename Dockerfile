@@ -1,6 +1,7 @@
 FROM debian:trixie-slim AS download
 
 ARG BW_VERSION=2025.9.0
+ARG BW_PORT=8087 # Port number for exposing the REST API
 
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -qq curl jq unzip \
@@ -11,6 +12,8 @@ RUN apt-get update \
     && unzip bw.zip
 
 FROM debian:trixie-slim
+
+ENV BW_PORT=$BW_PORT
 
 COPY --from=download bw /usr/local/bin/
 

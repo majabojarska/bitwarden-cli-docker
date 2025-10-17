@@ -52,4 +52,4 @@ else
   echo "${BW_SESSION}"> "${BW_SESSION_FILE}"
 fi
 
-bw serve --hostname 0.0.0.0 --port 8087
+bw serve --hostname 0.0.0.0 --port "${BW_PORT}"
