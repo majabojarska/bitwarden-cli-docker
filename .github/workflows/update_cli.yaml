@@ -32,7 +32,7 @@ jobs:
       - name: Replace BW_CLI_VERSION with latest tag
         run: |
           # Match line and replace whole
-          sed "/ARG BW_CLI_VERSION=*/s/.*/ARG BW_CLI_VERSION=${BW_CLI_VERSION_LATEST}/" Dockerfile
+          sed --in-place "/ARG BW_CLI_VERSION=*/s/.*/ARG BW_CLI_VERSION=${BW_CLI_VERSION_LATEST}/" Dockerfile
 
       - name: Git diff
         run: |
