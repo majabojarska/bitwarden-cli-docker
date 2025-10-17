@@ -109,9 +109,11 @@ The two segments are concatenated with a dot ('.') character, for example:
 1. [x] Impl. release pipeline.
 1. [x] Cool badges 😎.
 1. [x] Getting started docs.
-1. [ ] Automated testing pipeline?
-1. [ ] Example docker-compose file.
+1. [ ] Document contributing
+1. [ ] Document releasing
+1. [x] Example docker-compose file.
 1. [ ] Link to helm chart repo once that's ready.
+1. [ ] Automated testing pipeline?
 
 ## License and credits
 
