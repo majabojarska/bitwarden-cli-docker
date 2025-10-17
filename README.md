@@ -7,14 +7,17 @@ An opinionated [Bitwarden CLI](https://bitwarden.com/help/cli/) Docker image.
 
 ## To-do
 
-- [ ] Make port number configurable
-- [ ] Impl. PR check, just build the image for now.
-- [ ] Document versioning format.
-- [ ] Automate CLI version updates.
-  - Run workflow on a daily schedule.
-  - Generates diff version update and opens a PR to review and merge.
-- [ ] Impl. release drafter.
-- [ ] Automated testing pipeline?
+1. [ ] Add pre-commit
+1. [ ] Add shellcheck to status checks
+1. [ ] Make port number configurable
+1. [x] Impl. PR check, just build the image for now.
+1. [ ] Document versioning format.
+1. [ ] Automate CLI version updates.
+   - Run workflow on a daily schedule.
+   - Generates diff version update and opens a PR to review and merge.
+
+1. [ ] Impl. release drafter.
+1. [ ] Automated testing pipeline?
 
 ## License and credits
 
