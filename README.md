@@ -14,6 +14,28 @@ An opinionated [Bitwarden CLI](https://bitwarden.com/help/cli/) Docker image.
 - Implements a session management lifecycle. Sessions are persisted and reused
   across container startups.
 
+## Getting started
+
+```docker-compose
+services:
+  backend:
+    image: majabojarska/bitwarden-cli
+    environment:
+      # Upstream envs: https://bitwarden.com/help/cli/
+      BITWARDENCLI_APPDATA_DIR: /home/bitwaden/appdata
+      BITWARDENCLI_DEBUG: "false"
+
+      # Image-specific envs
+      BW_HOST: "vault.bitwarden.eu" # or *.com
+      BW_CLIENTID: "your_clientid"
+      BW_CLIENTSECRET: "supersecret"
+    volumes:
+      - appdata:/home/bitwarden/appdata # Stores the session file across restarts
+
+volumes:
+  appdata:
+```
+
 ## Releases
 
 ### Versioning
@@ -52,6 +74,8 @@ The two segments are concatenated with a dot ('.') character, for example:
    - Generates diff version update and opens a PR to review and merge.
 1. [x] Impl. release drafter.
 1. [x] Impl. release pipeline.
+1. [x] Cool badges 😎.
+1. [x] Getting started docs.
 1. [ ] Automated testing pipeline?
 1. [ ] Example docker-compose file.
 1. [ ] Link to helm chart repo once that's ready.
