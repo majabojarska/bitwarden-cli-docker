@@ -1,13 +1,13 @@
 FROM debian:trixie-slim AS download
 
-ARG BW_VERSION=2025.9.0
+ARG BW_CLI_VERSION=2025.9.0
 ARG BW_PORT=8087 # Port number for exposing the REST API
 
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -qq curl jq unzip \
-    && curl --silent --location --output bw.zip "https://github.com/bitwarden/clients/releases/download/cli-v${BW_VERSION}/bw-oss-linux-${BW_VERSION}.zip" \
+    && curl --silent --location --output bw.zip "https://github.com/bitwarden/clients/releases/download/cli-v${BW_CLI_VERSION}/bw-oss-linux-${BW_CLI_VERSION}.zip" \
     # Validate SHA256 before unzipping
-    && echo $(curl --silent --location "https://api.github.com/repos/bitwarden/clients/releases/tags/cli-v${BW_VERSION}" | jq --raw-output ".assets[] | select(.name == \"bw-oss-linux-${BW_VERSION}.zip\") .digest" | cut -f2 -d:) bw.zip > sum.txt \
+    && echo $(curl --silent --location "https://api.github.com/repos/bitwarden/clients/releases/tags/cli-v${BW_CLI_VERSION}" | jq --raw-output ".assets[] | select(.name == \"bw-oss-linux-${BW_CLI_VERSION}.zip\") .digest" | cut -f2 -d:) bw.zip > sum.txt \
     && sha256sum --check sum.txt \
     && unzip bw.zip
 
