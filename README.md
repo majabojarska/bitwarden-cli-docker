@@ -49,7 +49,7 @@ Configuration is provided via environment variables. We can identify two variabl
 
 Putting it all together, here's a minimal docker compose file:
 
-```docker-compose
+```yaml
 services:
   backend:
     image: majabojarska/bitwarden-cli
