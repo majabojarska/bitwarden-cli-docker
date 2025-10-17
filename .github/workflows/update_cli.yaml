@@ -26,7 +26,7 @@ jobs:
                 .[] | .assets | .[] |
                 select((.name | startswith("bw-oss-linux")) and (.name | endswith("zip"))) |
                 .name
-              ) | capture("(?<ver>[0-9]{4}[.][0-1][0-9][.][0-9]{1,3})").ver' \
+              ) | capture("(?<ver>[0-9]{4}[.][0-9]{1,2}[.][0-9]{1,3})").ver' \
             ) >> $GITHUB_ENV
 
       - name: Replace BW_CLI_VERSION with latest tag
