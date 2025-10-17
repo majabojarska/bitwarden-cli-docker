@@ -46,7 +46,7 @@ jobs:
         uses: docker/metadata-action@v5.8.0
         with:
           images: |
-            docker.io/${{ env.IMG_REPO }}:${{ steps.meta.outputs.tags }}
+            ${{ steps.meta.outputs.tags }}
             ghcr.io/${{ env.IMG_REPO }}:${{ steps.meta.outputs.tags }}
 
       - name: Build and push image
@@ -56,7 +56,7 @@ jobs:
           context: .
           push: true
           tags: |
-            docker.io/${{ env.IMG_REPO }}:${{ steps.meta.outputs.tags }}
+            ${{ steps.meta.outputs.tags }}
             ghcr.io/${{ env.IMG_REPO }}:${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 
