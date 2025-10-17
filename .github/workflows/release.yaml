@@ -65,10 +65,3 @@ jobs:
           subject-name: docker.io/${{ env.IMG_REPO }}
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
-
-      - name: Generate artifact attestation (GHCR)
-        uses: actions/attest-build-provenance@977bb373ede98d70efdf65b84cb5f73e068dcc2a # v3
-        with:
-          subject-name: ghcr.io/${{ env.IMG_REPO }}
-          subject-digest: ${{ steps.push.outputs.digest }}
-          push-to-registry: true
