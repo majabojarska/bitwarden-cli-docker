@@ -9,8 +9,9 @@ on:
     types: [opened, reopened, synchronize]
 
   # pull_request_target event is required for autolabeler to support PRs from forks
-  pull_request_target:
-    types: [opened, reopened, synchronize]
+  # Disabled due to https://github.com/release-drafter/release-drafter/issues/1369
+  # pull_request_target:
+  #   types: [opened, reopened, synchronize]
 
 permissions:
   contents: read
