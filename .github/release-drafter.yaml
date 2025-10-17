@@ -21,6 +21,7 @@ categories:
   - title: "🧰 Maintenance"
     labels:
       - "chore"
+      - "ci"
 
 change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
 change-title-escapes: '\<*_&'
