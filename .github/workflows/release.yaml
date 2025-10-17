@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Check release tag format
         run: |
-          if [[ "${{ github.ref_name }}" ]]; then
+          if [[ "${{ github.ref_name }}" =~ ^[0-9]{4}\.[0-9]{1,2}\.[0-9]{1,2}\.[0-9]{1,2}$ ]]; then
             echo "Release tag '${{ github.ref_name }}' is valid"
           else
             echo "Release tag '${{ github.ref_name }}' does not match the expected format (e.g. '2025.10.0.0'). See README.md for details."
