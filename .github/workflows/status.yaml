@@ -10,7 +10,6 @@ on:
 
 jobs:
   pre-commit:
-    name: pre-commit
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -20,7 +19,6 @@ jobs:
       - uses: pre-commit/action@v3.0.1
 
   build:
-    name: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
