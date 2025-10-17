@@ -45,8 +45,11 @@ The two segments are concatenated with a dot ('.') character, for example:
 1. [x] Automate CLI version updates.
    - Run workflow on a daily schedule.
    - Generates diff version update and opens a PR to review and merge.
-1. [ ] Impl. release drafter.
+1. [x] Impl. release drafter.
+1. [x] Impl. release pipeline.
 1. [ ] Automated testing pipeline?
+1. [ ] Example docker-compose file.
+1. [ ] Link to helm chart repo once that's ready.
 
 ## License and credits
 
