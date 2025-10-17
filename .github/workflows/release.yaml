@@ -1,0 +1,66 @@
+name: Publish Docker image
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  push_to_registries:
+    name: Push Docker image to multiple registries
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+      attestations: write
+      id-token: write
+    env:
+      IMG_REPO: majabojarska/bitwarden-cli
+    steps:
+      - name: Check release tag format
+        run: |
+          if [[ "${{ github.ref_name }}" ]]; then
+            echo "Release tag '${{ github.ref_name }}' is valid"
+          else
+            echo "Release tag '${{ github.ref_name }}' does not match the expected format (e.g. '2025.10.0.0'). See README.md for details."
+            exit 1
+          fi
+
+      - name: Check out the repo
+        uses: actions/checkout@v5
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3.6.0
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3.6.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v5.8.0
+        with:
+          images: |
+            ${{ env.IMG_REPO }}
+            ghcr.io/${{ env.IMG_REPO }}
+
+      - name: Build and push Docker images
+        id: push
+        uses: docker/build-push-action@v6.18.0
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Generate artifact attestation
+        uses: actions/attest-build-provenance@v3
+        with:
+          subject-name: ghcr.io/${{ env.IMG_REPO }}
+          subject-digest: ${{ steps.push.outputs.digest }}
+          push-to-registry: true
