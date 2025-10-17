@@ -1,6 +1,6 @@
 FROM debian:trixie-slim AS download
 
-ARG BW_CLI_VERSION=2025.09.0
+ARG BW_CLI_VERSION=2025.9.0
 
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -qq curl jq unzip \
