@@ -42,7 +42,7 @@ v2025.10.0.2
 1. [x] Make port number configurable
 1. [x] Impl. PR check, just build the image for now.
 1. [x] Document versioning format.
-1. [ ] Automate CLI version updates.
+1. [x] Automate CLI version updates.
    - Run workflow on a daily schedule.
    - Generates diff version update and opens a PR to review and merge.
 1. [ ] Impl. release drafter.
