@@ -47,7 +47,6 @@ jobs:
         with:
           images: |
             ${{ env.IMG_REPO }}
-            ghcr.io/${{ env.IMG_REPO }}
 
       - name: Build and push Docker images
         id: push
