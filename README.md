@@ -17,7 +17,10 @@ An opinionated [Bitwarden CLI](https://bitwarden.com/help/cli/) Docker image.
 
 ### Image
 
-The image is available both via Docker Hub and GHCR:
+The image is available both via
+[Docker Hub](https://hub.docker.com/r/majabojarska/bitwarden-cli/tags)
+and
+[GHCR](https://github.com/majabojarska/bitwarden-cli-docker/pkgs/container/bitwarden-cli):
 
 ```sh
 docker.io/majabojarska/bitwarden-cli
