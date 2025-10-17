@@ -4,6 +4,10 @@
 [![Build](https://github.com/majabojarska/bitwarden-cli-docker/actions/workflows/status.yaml/badge.svg)](https://github.com/majabojarska/bitwarden-cli-docker/actions/workflows/status.yaml)
 [![Scheduled update](https://github.com/majabojarska/bitwarden-cli-docker/actions/workflows/update_cli.yaml/badge.svg)](https://github.com/majabojarska/bitwarden-cli-docker/actions/workflows/update_cli.yaml)
 
+![Docker Image Version](https://img.shields.io/docker/v/majabojarska/bitwarden-cli)
+![Docker Image Size](https://img.shields.io/docker/image-size/majabojarska/bitwarden-cli)
+![Docker Pulls](https://img.shields.io/docker/pulls/majabojarska/bitwarden-cli)
+
 An opinionated [Bitwarden CLI](https://bitwarden.com/help/cli/) Docker image.
 
 - API token authentication.
