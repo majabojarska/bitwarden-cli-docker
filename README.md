@@ -10,7 +10,7 @@ An opinionated [Bitwarden CLI](https://bitwarden.com/help/cli/) Docker image.
 
 1. [x] Add pre-commit
 1. [x] Add shellcheck to status checks
-1. [ ] Make port number configurable
+1. [x] Make port number configurable
 1. [x] Impl. PR check, just build the image for now.
 1. [ ] Document versioning format.
 1. [ ] Automate CLI version updates.
