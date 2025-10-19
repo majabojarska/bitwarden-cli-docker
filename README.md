@@ -70,6 +70,10 @@ volumes:
   appdata:
 ```
 
+### Helm
+
+I'm developing a Helm chart over at [majabojarska/bitwarden-cli-helm](https://github.com/majabojarska/bitwarden-cli-helm).
+
 ## Releases
 
 ### Versioning
