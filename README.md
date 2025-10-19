@@ -2,6 +2,7 @@
 
 [![Publish Docker image](https://github.com/majabojarska/bitwarden-cli-docker/actions/workflows/release.yaml/badge.svg)](https://github.com/majabojarska/bitwarden-cli-docker/actions/workflows/release.yaml)
 [![Build](https://github.com/majabojarska/bitwarden-cli-docker/actions/workflows/status.yaml/badge.svg)](https://github.com/majabojarska/bitwarden-cli-docker/actions/workflows/status.yaml)
+[![Dependabot Updates](https://github.com/majabojarska/bitwarden-cli-docker/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/majabojarska/bitwarden-cli-docker/actions/workflows/dependabot/dependabot-updates)
 [![Scheduled update](https://github.com/majabojarska/bitwarden-cli-docker/actions/workflows/update_cli.yaml/badge.svg)](https://github.com/majabojarska/bitwarden-cli-docker/actions/workflows/update_cli.yaml)
 
 [![Docker Image Version](https://img.shields.io/docker/v/majabojarska/bitwarden-cli)](https://hub.docker.com/r/majabojarska/bitwarden-cli/tags)
