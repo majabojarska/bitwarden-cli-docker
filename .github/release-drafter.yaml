@@ -1,5 +1,36 @@
 name-template: "Draft"
 tag-template: "draft"
+
+autolabeler:
+  - label: "ci"
+    files:
+      - ".github/*"
+    branch:
+      - '/ci\/.+/'
+    title:
+      - '/ci\/.+/'
+
+  - label: "documentation"
+    files:
+      - "README.md"
+      - "LICENSE"
+    branch:
+      - '/docs\/.+/'
+    title:
+      - "/docs.+/"
+
+  - label: "feature"
+    branch:
+      - "/feat/.+/"
+    title:
+      - "/feat.+/"
+
+  - label: "fix"
+    branch:
+      - "/fix/.+/"
+    title:
+      - "/fix.+/"
+
 categories:
   - title: "⬆️ Dependencies"
     collapse-after: 3
