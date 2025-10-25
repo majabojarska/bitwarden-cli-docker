@@ -124,5 +124,8 @@ The two segments are concatenated with a dot ('.') character, for example:
 
 This is a spin-off of the MIT-licensed
 [charlesthomas/bitwarden-cli](https://github.com/charlesthomas/bitwarden-cli) project.
+However, since the Bitwarden CLI binary distributed with this project's Docker images is licensed under GPLv3, so is now this project.
+
+The CLI binary's sources can be found at [bitwarden/clients](https://github.com/bitwarden/clients).
 
 See the [LICENSE](./LICENSE) for more details.
