@@ -34,26 +34,31 @@ autolabeler:
 categories:
   - title: "⬆️ Dependencies"
     collapse-after: 3
-    labels:
-      - "dependencies"
+    when:
+      labels:
+        - "dependencies"
 
   - title: "🐛 Bug Fixes"
-    labels:
-      - "bugfix"
+    when:
+      labels:
+        - "bugfix"
 
   - title: "🚀 Features"
-    labels:
-      - "feature"
+    when:
+      labels:
+        - "feature"
 
   - title: "📄 Documentation"
-    labels:
-      - "documentation"
+    when:
+      labels:
+        - "documentation"
 
   - title: "🧰 Maintenance"
-    labels:
-      - "maintenance"
-      - "chore"
-      - "ci"
+    when:
+      labels:
+        - "maintenance"
+        - "chore"
+        - "ci"
 
 change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
 change-title-escapes: '\<*_&'
