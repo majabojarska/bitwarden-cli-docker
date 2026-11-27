@@ -1,6 +1,6 @@
 FROM debian:trixie-slim AS download
 
-ARG BW_CLI_VERSION=2026.10.1
+ARG BW_CLI_VERSION=
 
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -qq curl jq unzip \
